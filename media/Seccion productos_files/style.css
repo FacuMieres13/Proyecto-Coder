@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gris: #242222;
+    --gris-fondo: #2E2E2E;
+    --verde: #5AC358;
+    --fondo-articulo: #D9D9D9;
+    --fuente: 'Inter', sans-serif;
+
+}
+
+.secciones {
+    color: white;
+}
+
+.lista-secciones {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 0;
+}
+/* HEADER */
+header {
+    background-color: var(--gris);
+    font-family: 'Inter', sans-serif;
+    width: 100%
+}
+
+li.secciones a {
+    text-decoration: none;
+    color: white;
+}
+
+li.secciones {
+        list-style-type: none;
+        margin: 0;
+}
+li#seccion-actual a{
+    color: var(--verde);
+}
+.lista-secciones .secciones a:hover {
+    color: var(--verde); /* Cambiar el color del texto cuando el enlace está activo (durante el clic) */
+}
+
+.redes {
+    width: 2em;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gris);
+    font-family: var(--fuente);
+    color: white;
+    width: 100%;
+    padding: 5px;
+}
+
+footer li {
+    padding: 5px;
+}
+
+.lista-redes {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 1rem;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+}
+
+footer .eslogan{
+    color: #8D8A8A;
+    text-align: center;
+    margin: 0;
+}
+
+footer .moverse-footer {
+    text-align: left;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+footer > * {
+    width: 100%;
+}
+
+.a-logo .logo {
+    width: 8rem;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: var(--fuente);
+    color: white;
+}
+
+
+.seccion-deportes,
+.seccion-articulos {
+    background-color: var(--gris-fondo);
+
+}
+figure img {
+    width: 80%;
+}
+
+figure.deportes {
+    display: grid;
+    grid-template-areas: 
+        "futbol basket tennis"
+        "volley rugby boxeo";
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-items: center; /* Centrar horizontalmente */
+    margin: 0;
+}
+
+.deportes img.futbol {
+    grid-area: futbol;
+}
+
+.deportes img.basket {
+    grid-area: basket;
+}
+
+.deportes img.tennis {
+    grid-area: tennis;
+}
+
+.deportes img.volley {
+    grid-area: volley;
+}
+
+.deportes img.rugby {
+    grid-area: rugby;
+}
+
+.deportes img.boxeo {
+    grid-area: boxeo;
+}
+
+/* seccion productos */
+
+.titulo-productos {
+/* Estilos generales */
+font-size: 20px;
+color: white;
+}
+
+.seccion-productos {
+    background-color: var(--gris-fondo);
+    text-align: center;
+}
+
+/* Estilos para cada artículo */
+.container {
+    justify-content: center;
+    gap:1rem;
+}
+.productos {
+    background-color: var(--fondo-articulo);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.contenido-articulo .img-articulo {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contenido-articulo .img-articulo:hover {
+    opacity: 0.4;
+    border: 1px solid gray;
+    width: fit-content;
+}
+
+.contenido-articulo .nombre-articulo,
+.contenido-articulo .precio-articulo {
+    margin: 0;
+    text-align: center;
+}
+
+.contenido-articulo .nombre-articulo {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contenido-articulo .precio-articulo {
+    color: var(--color-precio);
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.seccion-nosotros,
+.seccion-login {
+    background-image: url('../media/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.seccion-home {
+    background: url('../media/banner.jpeg') rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.moverse-centro{
+    font-size: 7vw;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+}
+
+.titulo-nosotros,
+.eslogan-nosotros,
+.info-nosotros {
+    font-family: var(--fuente);
+    padding: 1rem;
+    color: white;
+}
+
+
+/* seccion login */
+
+.seccion-login {
+    display: flex;
+}
+
+.contenido-izquierda {
+    color: white;
+    font-family: var(--fuente);
+}
+
+.contenido-derecha {
+    display: flex;
+    width: 50%;
+    height: auto;
+    background-color: var(--verde);
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* Media query para pantallas más grandes, hasta tablet */
+@media screen and (max-width: 1024px) {
+    figure.deportes {
+        grid-template-areas: 
+            "futbol basket"
+            "tennis volley"
+            "rugby boxeo";
+    }
+}
+@media screen and (max-width: 767px) {
+    figure.deportes {
+        grid-template-areas: 
+            "futbol"
+            "basket"
+            "tennis"
+            "volley"
+            "rugby"
+            "boxeo";
+    }
+}
