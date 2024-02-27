@@ -1,0 +1,313 @@
+@use "sass:map"
+@import '_variables.sass'
+@import '_header.sass'
+@import '_footer.sass'
+
+@mixin input-styles()
+  border: none
+  cursor: pointer
+  border-radius: 4px
+  transition: background-color 0.3s ease
+  
+
+*
+  margin: 0
+  padding: 0
+
+.secciones
+  color: white
+
+.lista-secciones
+  width: 100%
+  display: flex
+  justify-content: space-around
+  align-items: center
+  padding: 1rem 0
+  margin: 0
+
+
+h1, h2
+  text-align: center
+  font-family: var(--fuente)
+  color: white
+
+div.main
+  background-color: map.get($colors, "gris-fondo")
+  width: 100%
+
+.seccion-deportes, .seccion-articulos
+  background-color: map.get($colors, "gris-fondo")
+
+figure img
+  width: 80%
+
+.deportes a
+  display: contents
+
+figure.deportes
+  img
+    border-radius: 10px
+
+  padding: 1rem 0 1rem 0
+  display: grid
+  grid-template-areas: "futbol basket" "tennis volley" "rugby boxeo"
+  gap: 20px
+  justify-items: center
+  margin: 0
+
+.deportes img
+  &.futbol
+    grid-area: futbol
+
+  &.basket
+    grid-area: basket
+
+  &.tennis
+    grid-area: tennis
+
+  &.volley
+    grid-area: volley
+
+  &.rugby
+    grid-area: rugby
+
+  &.boxeo
+    grid-area: boxeo
+
+/* seccion productos
+
+.titulo-productos
+  /* Estilos generales
+  font-size: 30px
+  color: white
+  padding: 2rem
+
+.seccion-productos
+  background-color: map.get($colors, "gris-fondo")
+  text-align: center
+  padding: 0
+  justify-content: center
+
+.productos
+  background-color: var(--fondo-articulo)
+  border-radius: 20px
+  margin-bottom: 20px
+  padding: 2rem
+
+.contenido-articulo
+  .img-articulo
+    width: 100%
+    max-height: auto
+    object-fit: contain
+    border-radius: 8px
+    margin-bottom: 2rem
+
+    &:hover
+      transform: scale(1.03)
+      box-shadow: 0 0 10px map.get($colors, "verde")
+
+  .nombre-articulo, .precio-articulo
+    margin: 0
+    text-align: center
+
+.seccion-precio
+  display: flex
+  justify-content: center
+
+  a
+    img
+      width: 15%
+      height: auto
+
+    color: map.get($colors, "gris")
+    text-decoration: none
+    border-radius: 10px
+    margin-top: 1.5rem
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    padding: 0.3rem
+    background-color: map.get($colors, "verde")
+    vertical-align: middle
+    width: 50%
+
+    &:hover
+      box-shadow: 0 0 6px map.get($colors, "gris")
+
+.seccion-precio-sale
+  @extend .seccion-precio
+  a
+    background-color: map.get($colors, "rojo")
+
+
+
+.seccion-precio-sold-out
+  @extend .seccion-precio
+  a
+    img
+      filter: invert(100%)
+
+    background-color: map.get($colors, "gris")
+    color: white
+
+  
+.contenido-articulo
+  .nombre-articulo
+    font-weight: bold
+    margin-top: 10px
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: map.get($colors, "gris")
+  font-size: 1.2rem
+  height: 100%
+
+
+.seccion-nosotros
+  figure
+    width: 50%
+
+  background: url('../media/banner.jpeg') rgba(0, 0, 0, 0.3)
+  background-blend-mode: multiply
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+.seccion-login, .seccion-home
+  background: url('../media/banner.jpeg') rgba(0, 0, 0, 0.3)
+  background-blend-mode: multiply
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+h1.moverse-centro
+  font-size: 7vw
+  font-family: 'IBM Plex Sans', sans-serif
+  color: rgba(255, 255, 255, 0.4)
+  text-align: center
+
+.titulo-nosotros, .eslogan-nosotros, .info-nosotros
+  font-family: var(--fuente)
+  padding: 1rem
+  color: white
+
+.titulo-nosotros, .info-nosotros, .eslogan-nosotros
+  text-align: center
+
+/* seccion login
+
+.seccion-login
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+
+.contenido-izquierda
+  width: 50%
+  text-align: center
+
+.bienvenida-login
+  text-align: center
+  width: 70%
+  font-size: 2.5vw
+  color: #ffffff
+
+.contenido-derecha
+  width: 50%
+  flex: 1
+  max-width: 400px
+  padding: 2rem
+  background-color: map.get($colors, "verde")
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  border-radius: 8px
+
+h1
+  font-size: 24px
+  color: #ffffff
+  margin-bottom: 20px
+
+.formulario
+  display: flex
+  flex-direction: column
+
+input, button
+  margin-bottom: 15px
+  padding: 10px
+  font-size: 14px
+  @include input-styles
+
+input[type="checkbox"]
+  margin-bottom: 10px
+  @include input-styles
+
+label
+  font-size: 14px
+  color: map.get($colors, "gris")
+  cursor: pointer
+
+button
+  background-color: #ffffff
+  color: map.get($colors, "gris")
+
+  &:hover
+    background-color: #45a049
+
+@media screen and (max-width: 1024px)
+  figure.deportes
+    padding: 1rem 0 1rem 0
+    grid-template-areas: "futbol basket" "tennis volley" "rugby boxeo"
+
+  .seccion-nosotros figure
+    width: 80%
+
+@media screen and (max-width: 767px)
+  figure.deportes
+    padding: 1rem 0 1rem 0
+    grid-template-areas: "futbol" "basket" "tennis" "volley" "rugby" "boxeo"
+
+  footer
+    display: block
+    background-color: map.get($colors, "gris")
+    font-family: var(--fuente)
+    color: white
+    width: 100%
+    padding: 5px
+
+    .moverse-footer
+      text-align: center
+      padding-left: 1rem
+      margin: 0
+
+  .lista-redes
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-right: 1rem
+    text-decoration: none
+    list-style-type: none
+    margin: 0
+
+  .seccion-login
+    flex-direction: column
+    width: 100%
+
+  .contenido-izquierda p
+    font-size: 1rem
+    width: 100%
+
+  .contenido-derecha, .contenido-izquierda
+    width: 80%
+
+  .contenido-derecha
+    max-height: 65vh
