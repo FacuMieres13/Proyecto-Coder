@@ -219,6 +219,7 @@ figure.deportes img {
   background-color: #5AC358;
   vertical-align: middle;
   width: 50%;
+
 }
 .seccion-precio a img, .seccion-precio-sold-out a img, .seccion-precio-sale a img {
   width: 15%;
@@ -226,6 +227,7 @@ figure.deportes img {
 }
 .seccion-precio a:hover, .seccion-precio-sold-out a:hover, .seccion-precio-sale a:hover {
   box-shadow: 0 0 6px #242222;
+
 }
 
 .seccion-precio-sale a {
@@ -235,6 +237,8 @@ figure.deportes img {
 .seccion-precio-sold-out a {
   background-color: #242222;
   color: white;
+  text-decoration: line-through;
+  pointer-events: none;
 }
 .seccion-precio-sold-out a img {
   filter: invert(100%);
