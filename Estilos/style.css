@@ -233,6 +233,31 @@ figure.deportes img {
 .seccion-precio-sale a {
   background-color: #e06363;
 }
+.seccion-precio-sale a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.seccion-precio-sale a::before {
+  width:100%;
+  content: "SALE";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #e06363;
+  color: #2E2E2E;
+  padding: 2px 5px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.seccion-precio-sale a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
 
 .seccion-precio-sold-out a {
   background-color: #242222;
