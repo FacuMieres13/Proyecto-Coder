@@ -404,7 +404,7 @@ button:hover {
 @media screen and (max-width: 1024px) {
   figure.deportes {
     padding: 1rem 0 1rem 0;
-    grid-template-areas: "futbol basket" "tennis volley" "rugby boxeo";
+    grid-template-areas: "futbol futbol" "basket basket" "tennis tennis" "volley volley" "rugby rugby" "boxeo boxeo";
   }
   .seccion-nosotros figure {
     width: 80%;
