@@ -5,6 +5,8 @@ Este proyecto surgió en base a mi pasión  por el deporte, entonces junté ambo
 
 Este sitio fue maquetado y estilizado utilizando, HTML 5, CSS, Bootstrap y SASS.
 
-Instagram: https://www.instagram.com/facu_mieres?igsh=ODlyNG81MDYzeXRy&utm_source=qr
+Instagram:
+https://www.instagram.com/facu_mieres
 
-Gmail: aguscora00@gmail.com
+Gmail:
+aguscora00@gmail.com
