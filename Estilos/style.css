@@ -449,9 +449,7 @@ button:hover {
     width: 80%;
   }
   .contenido-derecha {
-    display: flex;
-    flex-direction: column;
-    JUSTIFY-CONTENT: space-evenly;
+    max-height: 60vh
   }
 }
 
